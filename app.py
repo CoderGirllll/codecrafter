@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
-app = Flask("index.html", template_folder="templates")  # Specify templates folder
+app = Flask(__name__, template_folder="templates")  # Specify templates folder
 CORS(app)
 
 # SQLite Database
